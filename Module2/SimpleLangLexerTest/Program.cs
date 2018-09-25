@@ -13,7 +13,7 @@ namespace SimpleLangLexerTest
         {
             string fileContents = @"begin 
 id23 := 24;  
-cycle ; 2 id258 id29 ; 
+cycle ; 2 id258 id29 {wer ttt 1111} ; wr, w :* and +=re  <> red < div //sfe te43 546ry
 end";
             TextReader inputReader = new StringReader(fileContents);
             Lexer l = new Lexer(inputReader);
@@ -29,6 +29,8 @@ end";
             {
                 Console.WriteLine("lexer error: " + e.Message);
             }
+
+            Console.Read();
         }
     }
 }
